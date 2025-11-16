@@ -42,7 +42,12 @@ try {
 app.use("/uploads", express.static(uploadsDir));
 
 // ----- Middleware (order matters) -----
-app.use(cors({ origin: CLIENT_URI, credentials: true }));
+const allowedOrigins = [
+  "http://localhost:5173",                 // local dev
+  "https://your-frontend.onrender.com",   // will update after frontend deploy
+];
+app.use(cors({ origin: allowedOrigins,
+    credentials: true, }));
 app.use(express.json());
 app.use(cookieParser());
 
