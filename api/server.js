@@ -43,8 +43,8 @@ app.use("/uploads", express.static(uploadsDir));
 
 // ----- Middleware (order matters) -----
 const allowedOrigins = [
-  "http://localhost:5173",                 // local dev
-  "https://your-frontend.onrender.com",   // will update after frontend deploy
+  "http://localhost:5173", // local dev
+  "https://mern-chat-frontend-8mqv.onrender.com/", // will update after frontend deploy
 ];
 app.use(cors({ origin: allowedOrigins,
     credentials: true, }));
