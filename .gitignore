@@ -1,0 +1,8 @@
+api/node_modules
+mern_chat/node_modules
+
+api/.env
+api/uploads
+
+mern_chat/public
+mern_chat/assets
